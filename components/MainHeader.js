@@ -1,5 +1,6 @@
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
+import NavLink from "./NavLink";
 
 const MainHeader = () => {
   return (
@@ -9,10 +10,13 @@ const MainHeader = () => {
       </div>
       <ul>
         <li>
-          <Link href="/">Home</Link>
+          <NavLink href="/">Home</NavLink>{" "}
         </li>
         <li>
-          <Link href="/news">News</Link>
+          <NavLink href="/news">News</NavLink>{" "}
+        </li>
+        <li>
+          <NavLink href="/archive">Archive</NavLink>
         </li>
       </ul>
     </header>
